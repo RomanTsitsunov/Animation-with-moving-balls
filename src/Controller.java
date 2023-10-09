@@ -1,48 +1,48 @@
 public class Controller {
-    private Storage storage = new Storage();
+    private final Storage storage = new Storage();
 
-    public double getX1() {
+    public int getX1() {
         return storage.x1;
     }
 
-    public boolean setX1(double x1) {
-        if(x1 >= 0 && x1 <= 1000) {
+    public boolean setX1(int x1) {
+        if(x1 >= 0 && x1 <= 800) {
             storage.x1 = x1;
             return true;
         }
         return false;
     }
 
-    public double getY1() {
+    public int getY1() {
         return storage.y1;
     }
 
-    public boolean setY1(double y1) {
-        if(y1 >= 0 && y1 <= 1000) {
+    public boolean setY1(int y1) {
+        if(y1 >= 0 && y1 <= 800) {
             storage.y1 = y1;
             return true;
         }
         return false;
     }
 
-    public double getX2() {
+    public int getX2() {
         return storage.x2;
     }
 
-    public boolean setX2(double x2) {
-        if(x2 > storage.x1 && x2 <= 2000) {
+    public boolean setX2(int x2) {
+        if(x2 > storage.x1 && x2 <= 900) {
             storage.x2 = x2;
             return true;
         }
         return false;
     }
 
-    public double getY2() {
+    public int getY2() {
         return storage.y2;
     }
 
-    public boolean setY2(double y2) {
-        if(y2 > storage.y1 && y2 <= 2000) {
+    public boolean setY2(int y2) {
+        if(y2 > storage.y1 && y2 <= 900) {
             storage.y2 = y2;
             return true;
         }
@@ -54,7 +54,7 @@ public class Controller {
     }
 
     public boolean setX(double x) {
-        if(x >= storage.x1 && x <= storage.x2) {
+        if(x > storage.x1 && x < storage.x2 - 20) {
             storage.x = x;
             return true;
         }
@@ -66,7 +66,7 @@ public class Controller {
     }
 
     public boolean setY(double y) {
-        if(y >= storage.y1 && y <= storage.y2) {
+        if(y > storage.y1 && y < storage.y2 - 20) {
             storage.y = y;
             return true;
         }
