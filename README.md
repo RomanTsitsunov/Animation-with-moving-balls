@@ -1,5 +1,5 @@
 # Animation-with-moving-balls
-![ezgif com-gif-maker](https://github.com/RomanTsitsunov/Animation-with-moving-balls/assets/132264109/ed704225-b057-433d-b315-8dfef675f410)
+![gif2](https://github.com/RomanTsitsunov/Animation-with-moving-balls/assets/132264109/fb661a3f-08b2-4209-ad3e-96d85c73cc0f)
 ### Общее описание
 <div>
 Программа отображает анимацию движения абсолютно упругого шарика в прямоугольной области:<br>
