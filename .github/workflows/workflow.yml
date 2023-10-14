@@ -1,0 +1,29 @@
+name: GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+  test:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+      - name: Test with junit
+        run: mvn $MAVEN_OPTS test
