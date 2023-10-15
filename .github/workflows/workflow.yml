@@ -1,0 +1,35 @@
+name: GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          architecture: x64
+
+  test:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          architecture: x64
+      - name: Compiling test
+        run: javac -cp libs/junit-jupiter-api-5.9.3.jar src/Controller.java src/ControllerTest.java src/Storage.java
+      - name: Test junit with console
+        run: java -jar libs/junit-platform-console-standalone-1.6.0.jar --class-path src --scan-class-path --include-classname ControllerTest

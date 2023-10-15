@@ -1,3 +1,4 @@
+[![GitHub Actions](https://github.com/RomanTsitsunov/Animation-with-moving-balls/actions/workflows/workflow.yml/badge.svg)](https://github.com/RomanTsitsunov/Animation-with-moving-balls/actions/workflows/workflow.yml)
 # Animation-with-moving-balls
 ![gif2](https://github.com/RomanTsitsunov/Animation-with-moving-balls/assets/132264109/fb661a3f-08b2-4209-ad3e-96d85c73cc0f)
 ### Общее описание
